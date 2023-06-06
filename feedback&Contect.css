@@ -1,0 +1,159 @@
+nav{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*logo and options side  by side*/
+
+nav.logo{
+    width: 80px;
+}
+
+/* removing underline of options*/
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left:40px;
+}
+nav ul li a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 20px;
+}
+nav ul li::after{
+    content:'';
+    width: 0%;
+    height: 2px;
+    background: #ffffff;
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+}
+nav ul li:hover::after{
+    width: 100%;
+}
+
+
+
+
+
+
+
+.feedback{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.411);
+    
+    
+} 
+
+
+.coffee-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index:-1;
+    
+}
+
+@media (min-aspect-ratio:16/9){
+
+    .coffee-video{
+       width: 100%;
+       height: auto;
+    }
+ 
+ }
+
+ @media (max-aspect-ratio:16/9){
+
+    .coffee-video{
+        width: auto;
+        height: 50%;
+     }
+ }
+
+
+.coffee{
+    width: 400px;
+    position:relative;
+}
+
+.sun{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.star{
+    padding: 10px 60px;
+    background: rgba(87, 87, 87, 0.651);
+    border: 2px solid rgb(144, 127, 127);
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 30px;
+    color:#ffffff;
+
+}
+
+.popup{
+    width: 400px;
+    background: rgb(35, 34, 34);
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    left:50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #ffffff;
+    font-size: 1.5rem;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+
+}
+
+.popup img{
+    width: 100px;
+    margin-top: -50px;
+    box-sizing: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popup button{
+    width: 50%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #8b8b8b;
+    color: #ffffff;
+    border: 2px solid white;
+    outline: none;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0 , 0, 0, 0.2);
+
+}
