@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <title>My TCB product website</title>
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <link rel="stylesheet" href="feedback&Contect.css">
+        <script src="https://kit.fontawesome.com/1b05d5e240.js" crossorigin="anonymous">   
+        </script>
+    </head>
+    <body>
+    
+        <div class="feedback">
+            <video autoplay loop muted plays-inline class="coffee-video" >
+                <source src="images/coffee.mp4">
+              </video>
+
+              <nav class="book">
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="Visitustoknowmore.html"> About Us</a></li>
+                    <li><a href="Index.html">Log Out</a></li>
+                    <i class="fa-duotone fa-bars-filter"></i>
+                </ul>
+                
+            </nav>
+            <div class="sun">
+                <button type="submit" class="star" onclick="openPopup()">Confirm Everything</button>
+                <div class="popup" id ="popup">
+                    <img src="images/tick.png">
+                    <h2>Thank You!</h2>
+                    <p>You will get the time and date very soon through SMS to take your products </p>
+                    <button type="button" onclick="closePopup()">OK</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let popup = document.getElementById("popup");
+
+            function openPopup(){
+                popup.classList.add("open-popup");
+            }
+
+            function closePopup(){
+                popup.classList.remove("open-popup");
+            }
+        </script>
+    </body>
+</html>
